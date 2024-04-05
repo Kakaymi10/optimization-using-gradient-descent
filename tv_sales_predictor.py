@@ -525,7 +525,7 @@ def predict_sales(request: PredictionRequest):
 
     return {"predictions": Y_pred.tolist()}
 
-!pip install uvicorn
+
 
 if __name__ == "__main__":
     config = uvicorn.Config(app)
