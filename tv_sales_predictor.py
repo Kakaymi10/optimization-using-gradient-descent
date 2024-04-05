@@ -492,9 +492,6 @@ print(f"TV marketing expenses:\n{X_pred}")
 print(f"Predictions of sales using Scikit_Learn linear regression:\n{Y_pred_sklearn.T}")
 print(f"Predictions of sales using Gradient Descent:\n{Y_pred_gd}")
 
-!pip install fastapi
-
-!pip install uvicorn
 
 #What imports do we need for Fast api
 import asyncio
