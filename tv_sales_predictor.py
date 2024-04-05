@@ -526,12 +526,13 @@ def predict_sales(request: PredictionRequest):
     return {"predictions": Y_pred.tolist()}
 
 
-
-if __name__ == "__main__":
+async def main():
     config = uvicorn.Config(app)
     server = uvicorn.Server(config)
     await server.serve()
 
+if __name__ == "__main__":
+    asyncio.run(main())
 """You should have gotten similar results as in the previous sections.
 
 Well done! Now you know how gradient descent algorithm can be applied to train a real model. Re-producing results manually for a simple case should give you extra confidence that you understand what happends under the hood of commonly used functions.
