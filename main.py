@@ -15,6 +15,11 @@ with open("best_model.pkl", "rb") as f:
 class PredictionRequest(BaseModel):
     X: List[float]
 
+# Define route handler for the root URL
+@app.get('/')
+def root():
+    return {'message': 'Hello World!'}
+    
 # Define endpoint for linear regression prediction
 @app.post("/predict")
 def predict_sales(request: PredictionRequest):
