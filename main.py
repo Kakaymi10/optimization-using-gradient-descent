@@ -19,6 +19,11 @@ class PredictionRequest(BaseModel):
 @app.get('/')
 def root():
     return {'message': 'Hello World!'}
+
+# Allow the HEAD method for the root URL
+@app.head('/')
+async def root_head():
+    return
     
 # Define endpoint for linear regression prediction
 @app.post("/predict")
